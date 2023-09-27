@@ -9,7 +9,8 @@ class MovieItem extends HTMLElement {
   }
 
   render() {
-    this.className = "col mb-4";
+    this.className = "col-2 mb-4";
+
     this.innerHTML = `
         <style>
     .card {

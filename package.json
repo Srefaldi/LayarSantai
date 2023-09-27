@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Srefaldi/layarsantai.github.io.git"
+    "url": "git+https://github.com/Srefaldi/LayarSantai.git"
   },
   "author": "Sopia Refaldi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Srefaldi/layarsantai.github.io/issues"
+    "url": "https://github.com/Srefaldi/LayarSantai.git/issues"
   },
-  "homepage": "https://github.com/Srefaldi/layarsantai.github.io",
+  "homepage": "https://github.com/Srefaldi/LayarSantai.git",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",

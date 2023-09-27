@@ -7,7 +7,9 @@ class Movies extends HTMLElement {
   }
   render() {
     this.innerHTML = "";
-    this.className = "row row-cols-auto row-cols-md-auto";
+    this.className =
+      "row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6 g-4";
+
     this._movies.forEach((movie) => {
       const movieItemElement = document.createElement("movie-item");
       movieItemElement.movie = movie;
