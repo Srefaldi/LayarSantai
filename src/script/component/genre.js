@@ -1,0 +1,52 @@
+import DataGenre from "../data/genre-movies.json";
+
+class GenreMovies extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
+        <style>
+            #tags {
+                width: 80%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .tag {
+                color: white;
+                font-weight: 400;
+                padding: 5px 10px;
+                margin: 5px;
+                margin-right: 10px;
+                border: 1px solid #141E46;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            .tag:hover {
+                background-color: #141E46;
+                color: ##141E46 !important;
+            }
+            
+            .tag.highlight {
+                background-color: #141E46;
+                color: #FFF !important;
+                font-weight: 600;
+            }
+        </style>
+        `;
+    let htmlContent = "";
+    DataGenre.genres.map((genres) => {
+      htmlContent += `
+      
+                <div class="tag text-center" id="${genres.id}">${genres.name}</div>
+            `;
+    });
+
+    this.innerHTML += htmlContent;
+  }
+}
+
+customElements.define("movie-genre", GenreMovies);
