@@ -13,42 +13,44 @@ class MovieItem extends HTMLElement {
 
     this.innerHTML = `
         <style>
-    .card {
-        color: white;
-        border: none;
-        background: none;
-        max-width: 12rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Efek transisi perubahan latar belakang */
-    }
+  .card {
+    color: white;
+    border: none;
+    background: none;
+    max-width: 12rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-    .card:hover {
-        background-color: #141E46; /* Warna latar belakang saat dihover */
-    }
+  .card:hover {
+    background-color: #141E46;
+  }
 
-    .card-img {
-        height: 280px;
-    }
+  .card-img {
+    height: auto; /* Mengganti tinggi tetap menjadi responsif */
+    max-width: 100%; /* Gambar akan mengisi lebar kartu */
+  }
 
-    .card-body {
-        padding: 15px 5px;
-    }
+  .card-body {
+    padding: 15px 5px;
+  }
 
-    .card-text {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .card-text {
+    display: flex;
+    flex-direction: column; /* Mengubah tata letak teks ke vertikal */
+    align-items: center;
+  }
 
-    .card-text span {
-        color: white !important;
-        font-weight: 400;
-    }
+  .card-text span {
+    color: white !important;
+    font-weight: 400;
+  }
 
-    .card-text .ratings {
-        color: #FDA400 !important;
-    }
+  .card-text .ratings {
+    color: #FDA400 !important;
+  }
 </style>
+
 
 
         <div class="card card-content" data-id="${this._movie.id}">

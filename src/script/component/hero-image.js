@@ -33,79 +33,83 @@ class HeroImage extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <style>
-        /* Styling untuk HeroImage */
-.hero-image {
-  width: 500px;
-  height: 250px;
-  object-fit: cover;
-}
+     <style>
+  /* Styling untuk HeroImage */
+  .hero-image {
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
 
-.hero-image1 {
-  width: 100%;
-  height: 660px;
-  object-fit: cover;
-  filter: blur(2px);
-}
+  .hero-image1 {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: blur(2px);
+  }
 
-.hero-container {
+  .hero-container {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    padding: 20px; /* Sesuaikan padding sesuai kebutuhan */
+  }
 
-  display: flex;
-  flex-direction: row-reverse; /* Membalik arah flex (foto di sebelah kanan) */
-  position: relative;
-}
+  .hero-text {
+    flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 8px;
+    white-space: nowrap;
+  }
 
+  /* Tambahan CSS untuk perangkat berukuran kecil */
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column; /* Pindahkan elemen-elemen ke bawah satu per satu */
+    }
 
+    .hero-content {
+      text-align: center; /* Teks menjadi tengah */
+    }
 
-.prev-button {
-  left: 10px;
-}
+    .hero-image1 {
+      height: auto; /* Hapus tinggi tetap */
+    }
 
-.next-button {
-  right: 10px;
-}
+    .hero-text {
+      position: relative; /* Kembalikan posisi teks */
+      transform: translate(0%, 0%); /* Kembalikan posisi teks */
+    }
+  }
 
-.hero-text {
-  flex: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  font-size: 24px;
-  padding: 8px;
-  white-space: nowrap; /* Mencegah teks untuk wrap (memanjang) */
-}
+  /* Styling untuk elemen di sampingnya */
+  .hero-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    color: #252b48;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
 
+  .hero-content h1,
+  p {
+    color: white;
+    text-align: justify;
+  }
 
-/* Styling untuk elemen di sampingnya */
-.hero-content {
-  flex: 1; /* Memberi elemen di sampingnya fleksibilitas untuk mengisi sisa ruang */
-  padding: 20px;
-  text-align: left;
-  color: #252b48;
-  font-size: 1.2rem;
-  line-height: 1.7rem;
-}
-.hero-content h1, p{
-  color:white;
-  text-align: justify;
-}
+  .hero-logo {
+    width: 100%;
+    height: 50px;
+  }
+</style>
 
-.hero-logo{
-  widht: 100%;
-  height: 50px;
-}
-
-
-
-// Styke Article
-
-
-      }
-      </style>
-      
   
   <div class="hero-container">
     <img src="${
