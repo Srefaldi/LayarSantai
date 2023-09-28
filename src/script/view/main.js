@@ -16,7 +16,7 @@ const main = () => {
     DataSource.getMovie(keyword).then(renderResult).catch(fallbackResult);
   };
 
-  // search movie
+  // search
   const onButtonSearchClicked = () => {
     selectedGenre = [];
     setGenreEvent();
@@ -56,7 +56,7 @@ const main = () => {
         `;
   };
 
-  // initialization genre movie
+  // Genre
   const movieGenres = (id) => {
     DataSource.genreMovies(id).then(renderResult).catch(fallbackResult);
   };

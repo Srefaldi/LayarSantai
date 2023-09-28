@@ -22,14 +22,14 @@ class SearchTools extends HTMLElement {
 
   .search-form {
     display: flex;
-    flex-direction: column; /* Ubah arah tata letak menjadi kolom di perangkat kecil */
-    align-items: center; /* Pusatkan elemen secara horizontal */
-    text-align: center; /* Pusatkan teks */
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
   }
 
   .search-form input {
-    width: 100%; /* Lebar input mengisi seluruh kontainer */
-    margin: 10px 0; /* Beri jarak atas dan bawah antara elemen */
+    width: 100%; 
+    margin: 10px 0; 
     padding-left: 1rem;
   }
 
@@ -44,7 +44,7 @@ class SearchTools extends HTMLElement {
   }
 
   .search-form .icon {
-    display: none; /* Sembunyikan ikon pada perangkat kecil */
+    display: none; 
   }
 </style>
 
@@ -57,10 +57,10 @@ class SearchTools extends HTMLElement {
         class="form-control me-2"
         id="searchElement"
         type="search"
-      />
+      /><br>
       <button class="btn btn-dark" id="searchButtonElement" type="button">Search</button>
     </div>
-    <br> 
+    <br> <br>
     <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
       <h3 class="text-center my-auto">Genre Films</h3>
     </div>

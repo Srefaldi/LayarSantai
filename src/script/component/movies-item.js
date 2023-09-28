@@ -27,8 +27,8 @@ class MovieItem extends HTMLElement {
   }
 
   .card-img {
-    height: auto; /* Mengganti tinggi tetap menjadi responsif */
-    max-width: 100%; /* Gambar akan mengisi lebar kartu */
+    height: auto; 
+    max-width: 100%; 
   }
 
   .card-body {
@@ -37,7 +37,7 @@ class MovieItem extends HTMLElement {
 
   .card-text {
     display: flex;
-    flex-direction: column; /* Mengubah tata letak teks ke vertikal */
+    flex-direction: column; 
     align-items: center;
   }
 
